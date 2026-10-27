@@ -58,14 +58,15 @@
   .chip { padding: 4px 11px; font-size: .82rem; border-radius: 999px; background: var(--surface2); }
   .chip.on { background: var(--accent); color: var(--accent-text); border-color: var(--accent); }
   main { max-width: 1440px; margin: 0 auto; padding: 20px; }
-  .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
+  .grid { display: grid; gap: 16px; align-items: stretch; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
   .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
     overflow: hidden; box-shadow: var(--shadow); cursor: pointer; text-align: left; padding: 0;
-    display: flex; flex-direction: column; transition: transform .12s; }
+    display: grid; grid-row: span 4; grid-template-rows: subgrid; row-gap: 0; transition: transform .12s; }
   .card:hover, .card:focus-visible { transform: translateY(-3px); border-color: var(--accent); outline: none; }
   .card img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; background: var(--surface2); display: block; }
-  .card .info { padding: 10px 12px 12px; }
-  .card h3 { margin: 0 0 2px; font-size: .95rem; line-height: 1.3; }
+  .card .meta { padding: 0 12px; align-self: start; }
+  .card .tags { margin: 0; padding: 8px 12px 12px; align-self: end; align-content: flex-end; }
+  .card h3 { margin: 0; padding: 10px 12px 2px; font-size: .95rem; line-height: 1.3; align-self: start; }
   .meta { color: var(--muted); font-size: .78rem; }
   .tags { margin-top: 6px; display: flex; flex-wrap: wrap; gap: 4px; }
   .tag { font-size: .7rem; padding: 1px 8px; border-radius: 999px; background: var(--surface2); color: var(--muted); }
@@ -230,10 +231,10 @@
     $('grid').innerHTML = out.map(function (g) {
       return '<button class="card" data-i="' + g._i + '">' +
         '<img loading="lazy" src="' + esc(g.image_url_medium) + '" alt="" onerror="this.style.visibility=\'hidden\'">' +
-        '<div class="info"><h3>' + esc(g.name) + '</h3>' +
+        '<h3>' + esc(g.name) + '</h3>' +
         '<div class="meta">' + esc(g.titleID || 'No title ID') + (g.version ? ' · ' + esc(g.version) : '') + '</div>' +
         '<div class="tags">' + (g.genres || []).map(function (x) { return '<span class="tag">' + esc(x) + '</span>'; }).join('') + '</div>' +
-        '</div></button>';
+        '</button>';
     }).join('');
     $('msg').innerHTML = out.length ? '' : '<div class="empty">No games match your search.</div>';
   }
