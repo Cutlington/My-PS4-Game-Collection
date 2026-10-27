@@ -26,17 +26,20 @@
   body { margin: 0; background: var(--bg); color: var(--text);
     font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
   header { position: sticky; top: 0; z-index: 10; background: var(--bg);
-    border-bottom: 1px solid var(--border); padding: 14px 20px; }
+    border-bottom: 1px solid var(--border); padding: 12px 20px; }
   .bar { max-width: 1400px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
-  .bar.top { justify-content: space-between; margin-bottom: 10px; }
+  .bar.top { justify-content: space-between; margin-bottom: 8px; }
   .bar.filters { align-items: center; }
   h1 { font-size: 1.25rem; margin: 0; }
   #count { background: var(--accent); color: var(--accent-text); font-weight: 600; font-size: .85rem;
     padding: 6px 12px; border-radius: 999px; white-space: nowrap; min-width: 150px; text-align: center; }
   .quick { display: flex; flex-wrap: wrap; gap: 6px; flex: 1 1 320px; }
-  .qbadge { padding: 4px 11px; font-size: .8rem; font-weight: 600; border-radius: 999px;
-    background: var(--surface2); }
+  .qbadge { padding: 4px 11px; font-size: .8rem; font-weight: 500; border-radius: 999px;
+    background: transparent; color: var(--muted); }
+  .qbadge:hover { color: var(--text); }
+  .qbadge.more { border-style: dashed; }
   .qbadge.on { background: var(--accent); color: var(--accent-text); border-color: var(--accent); }
+  .chips.collapsed { display: none; }
   #theme { min-width: 76px; }
   input[type=search], select { background: var(--surface); color: var(--text);
     border: 1px solid var(--border); border-radius: 8px; padding: 8px 12px; font: inherit; }
@@ -104,7 +107,7 @@
       <option value="all">All games</option>
     </select>
   </div>
-  <div class="chips" id="chips"></div>
+  <div class="chips collapsed" id="chips"></div>
 </header>
 <main>
   <div id="grid" class="grid"></div>
@@ -137,10 +140,25 @@
     return '<button class="qbadge" data-g="' + esc(p[0]) + '">' + esc(p[1]) + '</button>';
   }).join('');
 
+  var moreBtn = document.createElement('button');
+  moreBtn.className = 'qbadge more';
+  $('quick').appendChild(moreBtn);
+  function updateMore() {
+    var open = !$('chips').classList.contains('collapsed');
+    var extra = 0;
+    activeGenres.forEach(function (g) { if (!QUICK.some(function (p) { return p[0] === g; })) extra++; });
+    moreBtn.textContent = 'More genres' + (extra && !open ? ' (' + extra + ')' : '') + (open ? ' ▴' : ' ▾');
+  }
+  moreBtn.addEventListener('click', function () {
+    $('chips').classList.toggle('collapsed');
+    updateMore();
+  });
+
   function syncBadges() {
     document.querySelectorAll('.chip, .qbadge').forEach(function (b) {
-      b.classList.toggle('on', activeGenres.has(b.dataset.g));
+      if (b.dataset.g) b.classList.toggle('on', activeGenres.has(b.dataset.g));
     });
+    updateMore();
   }
   function toggleGenre(e) {
     var b = e.target.closest('.chip, .qbadge'); if (!b) return;
@@ -232,7 +250,7 @@
   $('q').addEventListener('input', render);
   $('sort').addEventListener('change', render);
   $('chips').addEventListener('click', toggleGenre);
-  $('quick').addEventListener('click', toggleGenre);
+  $('quick').addEventListener('click', function (e) { if (e.target.dataset.g) toggleGenre(e); });
   $('grid').addEventListener('click', function (e) {
     var c = e.target.closest('.card'); if (c) openGame(+c.dataset.i);
   });
@@ -249,6 +267,7 @@
   });
   matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateThemeLabel);
   updateThemeLabel();
+  updateMore();
 
   fetch(DATA_FILE)
     .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
