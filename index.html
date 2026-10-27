@@ -257,7 +257,7 @@
     var g = games[i];
     var dlc = dlcNames(g);
     var body = dlc.length
-      ? '<h4>DLC available (' + dlc.length + ')</h4><ul class="dlc-list">' +
+      ? '<h4>DLC (' + dlc.length + ')</h4><ul class="dlc-list">' +
         dlc.map(function (n) { return '<li>' + esc(n) + '</li>'; }).join('') + '</ul>'
       : '<p>' + esc(g.description || g.description_short || 'No description available.') + '</p>';
     $('modal').innerHTML =
