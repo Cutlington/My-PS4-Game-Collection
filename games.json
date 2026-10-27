@@ -1380,7 +1380,7 @@
     "description_short": "The animatronics Roxy, Chica, and Monty have been enlisted by Pizzaplex security to hunt you, and their pursuit is a relentless one. Strategizing how you’ll get past enemies is paramount to avoid those actively pursuing you, as well as more passive S.T.A.F.F. bots that will sound the alarm and call the animatronics to your location if they spot you. In the event you’re detected, run to escape the immediate danger quickly, but running is limited to the amount of stamina you’ve got, so use it wisely. The animatronics also evolve as the night progresses, which means you’ll need to adapt if you want to survive.  Freddy Fazbear himself is your most dependable ally, acting as a guide and protector through the Pizzaplex, giving you shortcuts, insider tips, and warnings about the challenges you’ll face. You can also hop inside Freddy’s oversized birthday-cake-hatch, allowing you to hide and march around undetected. You will need to be thoughtful about how and when you use Freddy because he’s only got so much power and requires frequent stops at recharge stations.",
     "description": "Five Nights at Freddy’s: Security Breach is the latest installment of the family-friendly horror games loved by millions of players from all over the globe. Play as Gregory, a young boy trapped overnight in Freddy Fazbear's Mega Pizzaplex. With the help of Freddy Fazbear himself, Gregory must survive the near-unstoppable hunt of reimagined Five Nights at Freddy’s characters, as well as new, horrific threats.",
     "dlc": [
-	"Ruin DLC"
+      "Ruin DLC",
 	],
     "image_url_medium": "https://images.igdb.com/igdb/image/upload/t_720p_2x/co4aro.png"
   },
