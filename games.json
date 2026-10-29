@@ -179,7 +179,7 @@
     "name": "Assassin's Creed Chronicles: Trilogy Pack",
     "titleID": "CUSA03440",
     "version": "v1.02",
-    "region": "",
+    "region": "EU",
     "size": "11.47 GB",
     "total_size": "11.47 GB",
     "genres": [
@@ -199,7 +199,7 @@
     "name": "Assassin's Creed IV: Black Flag - Gold Edition",
     "titleID": "CUSA00010",
     "version": "v1.04",
-    "region": "",
+    "region": "US",
     "size": "24.01 GB",
     "total_size": "24.01 GB",
     "genres": [
@@ -219,7 +219,7 @@
     "name": "Assassin's Creed Origins",
     "titleID": "CUSA05625",
     "version": "v1.61",
-    "region": "",
+    "region": "EU",
     "size": "49.75 GB",
     "total_size": "73.96 GB",
     "genres": [
@@ -320,7 +320,7 @@
     "name": "Assassin's Creed Valhalla",
     "titleID": "CUSA18534",
     "version": "v8.00",
-    "region": "",
+    "region": "EU",
     "size": "92.7 GB",
     "total_size": "121.78 GB",
     "genres": [
@@ -389,7 +389,7 @@
     "name": "Assassin's Creed: Rogue Remastered",
     "titleID": "CUSA10123",
     "version": "v1.01",
-    "region": "",
+    "region": "EU",
     "size": "8.47 GB",
     "total_size": "8.47 GB",
     "genres": [
@@ -409,7 +409,7 @@
     "name": "Assassin's Creed: The Ezio Collection",
     "titleID": "CUSA04893",
     "version": "v1.02",
-    "region": "",
+    "region": "EU",
     "size": "38.23 GB",
     "total_size": "38.23 GB",
     "genres": [
@@ -777,7 +777,7 @@
     "name": "Battlefield 4",
     "titleID": "CUSA00049",
     "version": "v1.24",
-    "region": "",
+    "region": "EU",
     "size": "35.47 GB",
     "total_size": "35.47 GB",
     "genres": [
@@ -799,7 +799,7 @@
     "name": "Battlefield Hardline",
     "titleID": "CUSA00633",
     "version": "v1.09",
-    "region": "",
+    "region": "EU",
     "size": "45.38 GB",
     "total_size": "45.38 GB",
     "genres": [
@@ -1218,7 +1218,7 @@
     "name": "Call of Duty: Black Ops",
     "titleID": "CUSA57547",
     "version": "v1.08",
-    "region": "",
+    "region": "US",
     "size": "24.59 GB",
     "total_size": "24.59 GB",
     "genres": [
@@ -1238,7 +1238,7 @@
     "name": "Call of Duty: Black Ops II",
     "titleID": "CUSA57548",
     "version": "v1.10",
-    "region": "",
+    "region": "US",
     "size": "32.47 GB",
     "total_size": "32.47 GB",
     "genres": [
@@ -1258,7 +1258,7 @@
     "name": "Call of Duty: Modern Warfare 2 Campaign Remastered",
     "titleID": "CUSA07904",
     "version": "v1.00",
-    "region": "",
+    "region": "EU",
     "size": "48.03 GB",
     "total_size": "48.03 GB",
     "genres": [
@@ -1622,7 +1622,7 @@
     "name": "Crysis 2 Remastered",
     "titleID": "CUSA18658",
     "version": "v1.02",
-    "region": "",
+    "region": "US",
     "size": "19.35 GB",
     "total_size": "19.35 GB",
     "genres": [
@@ -1642,7 +1642,7 @@
     "name": "Crysis 3 Remastered",
     "titleID": "CUSA18657",
     "version": "v1.02",
-    "region": "",
+    "region": "US",
     "size": "11.43 GB",
     "total_size": "11.43 GB",
     "genres": [
@@ -1662,7 +1662,7 @@
     "name": "Crysis Remastered",
     "titleID": "CUSA18671",
     "version": "v1.03",
-    "region": "",
+    "region": "EU",
     "size": "12.86 GB",
     "total_size": "12.86 GB",
     "genres": [
@@ -1726,7 +1726,7 @@
     "image_url_medium": "https://images.igdb.com/igdb/image/upload/t_720p_2x/co2pum.png"
   },
   {
-    "name": "Dave Mirra Freestyle BMX 2 (PS2)",
+    "name": "Dave Mirra Freestyle BMX 2",
     "titleID": "SLUS20159",
     "version": "v1.00",
     "region": "US",
@@ -2096,7 +2096,7 @@
     "name": "EA Sports FC 27",
     "titleID": "CUSA57220",
     "version": "v1.03",
-    "region": "",
+    "region": "US",
     "size": "44.58 GB",
     "total_size": "44.58 GB",
     "genres": [
@@ -2372,7 +2372,7 @@
     "name": "Far Cry 3: Classic Edition",
     "titleID": "CUSA10357",
     "version": "v1.03",
-    "region": "",
+    "region": "US",
     "size": "6.37 GB",
     "total_size": "6.37 GB",
     "genres": [
@@ -2393,7 +2393,7 @@
     "name": "Far Cry 4",
     "titleID": "CUSA00462",
     "version": "v1.08",
-    "region": "",
+    "region": "EU",
     "size": "26.9 GB",
     "total_size": "30.63 GB",
     "genres": [],
@@ -2431,7 +2431,7 @@
     "name": "Far Cry 5: Gold Edition",
     "titleID": "CUSA05849",
     "version": "v1.19",
-    "region": "",
+    "region": "EU",
     "size": "53.95 GB",
     "total_size": "53.97 GB",
     "genres": [
@@ -2520,7 +2520,7 @@
     "name": "Far Cry 6",
     "titleID": "CUSA15778",
     "version": "v1.12",
-    "region": "",
+    "region": "EU",
     "size": "61.31 GB",
     "total_size": "61.32 GB",
     "genres": [
@@ -2577,7 +2577,7 @@
     "name": "Far Cry New Dawn",
     "titleID": "CUSA13887",
     "version": "v1.07",
-    "region": "",
+    "region": "EU",
     "size": "18.2 GB",
     "total_size": "18.20 GB",
     "genres": [
@@ -2602,7 +2602,7 @@
     "name": "Far Cry Primal: Apex Edition",
     "titleID": "CUSA03310",
     "version": "v1.03",
-    "region": "",
+    "region": "EU",
     "size": "12.09 GB",
     "total_size": "12.10 GB",
     "genres": [
@@ -2680,7 +2680,7 @@
     "name": "Five Nights at Freddy's",
     "titleID": "CUSA16870",
     "version": "v1.00",
-    "region": "",
+    "region": "US",
     "size": "172.62 MB",
     "total_size": "172.62 MB",
     "genres": [
@@ -2702,7 +2702,7 @@
     "name": "Five Nights at Freddy's 2",
     "titleID": "CUSA17980",
     "version": "v1.00",
-    "region": "",
+    "region": "US",
     "size": "239.93 MB",
     "total_size": "239.93 MB",
     "genres": [
@@ -2724,7 +2724,7 @@
     "name": "Five Nights at Freddy's 3",
     "titleID": "CUSA17981",
     "version": "v1.00",
-    "region": "",
+    "region": "US",
     "size": "130.61 MB",
     "total_size": "130.61 MB",
     "genres": [
@@ -2746,7 +2746,7 @@
     "name": "Five Nights at Freddy's 4",
     "titleID": "CUSA17982",
     "version": "v1.00",
-    "region": "",
+    "region": "US",
     "size": "526.52 MB",
     "total_size": "526.52 MB",
     "genres": [
@@ -2768,7 +2768,7 @@
     "name": "Five Nights at Freddy's: Into the Pit",
     "titleID": "CUSA45096",
     "version": "v1.05",
-    "region": "",
+    "region": "EU",
     "size": "1.72 GB",
     "total_size": "1.72 GB",
     "genres": [
@@ -2790,7 +2790,7 @@
     "name": "Five Nights at Freddy's: Security Breach",
     "titleID": "CUSA24172",
     "version": "v1.16",
-    "region": "",
+    "region": "US",
     "size": "15.7 GB",
     "total_size": "21.95 GB",
     "genres": [
@@ -2813,7 +2813,7 @@
     "name": "Five Nights at Freddy's: Sister Location",
     "titleID": "CUSA17983",
     "version": "v1.01",
-    "region": "",
+    "region": "US",
     "size": "937.89 MB",
     "total_size": "937.89 MB",
     "genres": [
@@ -2857,7 +2857,7 @@
     "name": "Friday the 13th: The Game",
     "titleID": "CUSA10007",
     "version": "v1.24",
-    "region": "",
+    "region": "US",
     "size": "9.05 GB",
     "total_size": "9.06 GB",
     "genres": [
@@ -3008,7 +3008,7 @@
     "name": "Ghostrunner",
     "titleID": "CUSA24170",
     "version": "v1.14",
-    "region": "",
+    "region": "US",
     "size": "14.44 GB",
     "total_size": "14.44 GB",
     "genres": [
@@ -3042,7 +3042,7 @@
     "name": "Giana Sisters: Twisted Dreams - Director's Cut",
     "titleID": "CUSA01448",
     "version": "v1.01",
-    "region": "",
+    "region": "US",
     "size": "1.51 GB",
     "total_size": "1.51 GB",
     "genres": [
@@ -3170,7 +3170,7 @@
     "name": "God of War III: Remastered",
     "titleID": "CUSA01715",
     "version": "v1.02",
-    "region": "",
+    "region": "EU",
     "size": "22.34 GB",
     "total_size": "22.34 GB",
     "genres": [
@@ -3749,7 +3749,7 @@
     "name": "Jurassic World Evolution",
     "titleID": "CUSA09991",
     "version": "v1.34",
-    "region": "",
+    "region": "EU",
     "size": "9.65 GB",
     "total_size": "9.66 GB",
     "genres": [
@@ -3818,7 +3818,7 @@
     "name": "Jurassic World Evolution 2",
     "titleID": "CUSA27319",
     "version": "v1.35",
-    "region": "",
+    "region": "EU",
     "size": "11.43 GB",
     "total_size": "11.44 GB",
     "genres": [
@@ -4018,6 +4018,24 @@
     "image_url_medium": "https://images.igdb.com/igdb/image/upload/t_720p_2x/co2zvl.png"
   },
   {
+    "name": "LEGO Indiana Jones The Original Adventures",
+    "titleID": "ULUS10365",
+    "version": "v1.00",
+    "region": "US",
+    "size": "697.04 MB",
+    "total_size": "697.04 MB",
+    "genres": [],
+    "description_short": "",
+    "description": "",
+    "dlc": [
+      {
+        "name": "",
+        "size": ""
+      }
+    ],
+    "image_url_medium": ""
+  },
+  {
     "name": "LEGO Marvel Super Heroes",
     "titleID": "CUSA00044",
     "version": "v1.03",
@@ -4033,11 +4051,11 @@
     "description": "Lego Marvel Super Heroes is a 2013 Lego-themed action-adventure video game developed by Traveller's Tales and published by Warner Bros. Interactive Entertainment. The game features gameplay similar to other Lego titles, alternating between various action-adventure sequences and puzzle-solving scenarios.  The game's storyline sees various heroes from the Marvel Universe joining forces to foil the schemes of Doctor Doom and Loki, who have also recruited several villains to aid them, and seek to c...",
     "dlc": [
       {
-        "name": "LEGOMARVELASGARD",
+        "name": "Asgard Pack",
         "size": "1.44 MB"
       },
       {
-        "name": "LEGOMARVELSUPER1",
+        "name": "Super Pack",
         "size": "1.51 MB"
       }
     ],
@@ -4068,7 +4086,7 @@
     "name": "LEGO Pirates of The Caribbean The Video Game",
     "titleID": "ULUS10575",
     "version": "v1.00",
-    "region": "EU",
+    "region": "US",
     "size": "1.36 GB",
     "total_size": "1.36 GB",
     "genres": [],
@@ -4389,10 +4407,10 @@
     "image_url_medium": "https://images.igdb.com/igdb/image/upload/t_720p_2x/co1lx6.png"
   },
   {
-    "name": "MARIO KART HOMEBREW",
+    "name": "Mario Kart Homebrew",
     "titleID": "HOTZ79000",
     "version": "v1.00",
-    "region": "",
+    "region": "US",
     "size": "2.4 GB",
     "total_size": "2.40 GB",
     "genres": [],
@@ -5165,7 +5183,7 @@
     "name": "Mortal Kombat: Legacy Kollection",
     "titleID": "CUSA53178",
     "version": "v1.12",
-    "region": "",
+    "region": "US",
     "size": "12.78 GB",
     "total_size": "12.78 GB",
     "genres": [
@@ -5415,7 +5433,7 @@
     "name": "New Tales from the Borderlands",
     "titleID": "CUSA27678",
     "version": "v1.02",
-    "region": "",
+    "region": "EU",
     "size": "25.07 GB",
     "total_size": "25.07 GB",
     "genres": [
@@ -5696,7 +5714,7 @@
     "name": "Payday 2 Crimewave Edition",
     "titleID": "CUSA01761",
     "version": "v1.52",
-    "region": "",
+    "region": "EU",
     "size": "24.15 GB",
     "total_size": "24.18 GB",
     "genres": [],
@@ -6360,10 +6378,10 @@
     "image_url_medium": "https://images.igdb.com/igdb/image/upload/t_720p_2x/co9qak.png"
   },
   {
-    "name": "Risk (PS1)",
+    "name": "Risk",
     "titleID": "SLES00707",
     "version": "v1.00",
-    "region": "US",
+    "region": "EU",
     "size": "297.47 MB",
     "total_size": "297.47 MB",
     "genres": [],
@@ -6730,7 +6748,7 @@
     "name": "Saints Row",
     "titleID": "CUSA26457",
     "version": "v1.17",
-    "region": "",
+    "region": "EU",
     "size": "70.09 GB",
     "total_size": "70.11 GB",
     "genres": [
@@ -6807,7 +6825,7 @@
     "name": "Saints Row IV: Re-Elected",
     "titleID": "CUSA01106",
     "version": "v1.00",
-    "region": "",
+    "region": "EU",
     "size": "12.32 GB",
     "total_size": "12.32 GB",
     "genres": [
@@ -6828,7 +6846,7 @@
     "name": "Saints Row: Gat Out of Hell",
     "titleID": "CUSA00939",
     "version": "v1.00",
-    "region": "",
+    "region": "EU",
     "size": "6.67 GB",
     "total_size": "6.67 GB",
     "genres": [
@@ -6849,7 +6867,7 @@
     "name": "Saints Row: The Third Remastered",
     "titleID": "CUSA14350",
     "version": "v1.11",
-    "region": "",
+    "region": "EU",
     "size": "40.67 GB",
     "total_size": "40.67 GB",
     "genres": [
@@ -7061,7 +7079,7 @@
     "name": "Sniper Elite 4",
     "titleID": "CUSA04099",
     "version": "v1.20",
-    "region": "",
+    "region": "EU",
     "size": "41.51 GB",
     "total_size": "54.67 GB",
     "genres": [
@@ -7127,7 +7145,7 @@
     "name": "Sniper Elite V2 Remastered",
     "titleID": "CUSA12351",
     "version": "v1.06",
-    "region": "",
+    "region": "EU",
     "size": "11.9 GB",
     "total_size": "11.90 GB",
     "genres": [
@@ -7150,7 +7168,7 @@
     "name": "Sniper Ghost Warrior Contracts",
     "titleID": "CUSA14638",
     "version": "v1.09",
-    "region": "",
+    "region": "US",
     "size": "14.04 GB",
     "total_size": "14.04 GB",
     "genres": [
@@ -7170,7 +7188,7 @@
     "name": "Sniper Ghost Warrior Contracts 2",
     "titleID": "CUSA20373",
     "version": "v1.05",
-    "region": "",
+    "region": "EU",
     "size": "12.27 GB",
     "total_size": "12.27 GB",
     "genres": [
@@ -8581,10 +8599,10 @@
     "image_url_medium": "https://images.igdb.com/igdb/image/upload/t_720p_2x/co23f6.png"
   },
   {
-    "name": "Time Crisis 2 (PS2)",
+    "name": "Time Crisis 2",
     "titleID": "SLUS20219",
     "version": "v1.00",
-    "region": "",
+    "region": "US",
     "size": "577.57 MB",
     "total_size": "577.57 MB",
     "genres": [],
@@ -8648,7 +8666,7 @@
     "image_url_medium": "https://images.igdb.com/igdb/image/upload/t_720p_2x/co4uy4.png"
   },
   {
-    "name": "Tony Hawk's American Wasteland",
+    "name": "Tony Hawks American Wasteland",
     "titleID": "SLUS21208",
     "version": "v1.00",
     "region": "US",
@@ -8666,7 +8684,7 @@
     "image_url_medium": ""
   },
   {
-    "name": "Tony Hawk's Pro Skater (PS2)",
+    "name": "Tony Hawks Pro Skater",
     "titleID": "SLUS00860",
     "version": "v1.00",
     "region": "US",
@@ -8684,7 +8702,7 @@
     "image_url_medium": ""
   },
   {
-    "name": "Tony Hawk's Pro Skater 1+2",
+    "name": "Tony Hawks Pro Skater 1+2",
     "titleID": "CUSA17922",
     "version": "v1.10",
     "region": "US",
@@ -8705,7 +8723,25 @@
     "image_url_medium": "https://images.igdb.com/igdb/image/upload/t_720p_2x/co25u7.png"
   },
   {
-    "name": "Tony Hawk's Pro Skater 3",
+    "name": "Tony Hawks Pro Skater 2",
+    "titleID": "SLUS01066",
+    "version": "v1.00",
+    "region": "US",
+    "size": "553.65 MB",
+    "total_size": "553.65 MB",
+    "genres": [],
+    "description_short": "",
+    "description": "",
+    "dlc": [
+      {
+        "name": "",
+        "size": ""
+      }
+    ],
+    "image_url_medium": ""
+  },
+  {
+    "name": "Tony Hawks Pro Skater 3",
     "titleID": "SLUS20013",
     "version": "v1.00",
     "region": "US",
@@ -8725,7 +8761,7 @@
     "image_url_medium": "https://images.igdb.com/igdb/image/upload/t_720p_2x/co2nj3.png"
   },
   {
-    "name": "Tony Hawk's Pro Skater 3+4",
+    "name": "Tony Hawks Pro Skater 3+4",
     "titleID": "CUSA44732",
     "version": "v1.07",
     "region": "US",
@@ -8746,7 +8782,7 @@
     "image_url_medium": "https://images.igdb.com/igdb/image/upload/t_720p_2x/co9hou.png"
   },
   {
-    "name": "Tony Hawk's Pro Skater 4",
+    "name": "Tony Hawks Pro Skater 4",
     "titleID": "SLUS20504",
     "version": "v1.00",
     "region": "US",
@@ -8766,7 +8802,7 @@
     "image_url_medium": "https://images.igdb.com/igdb/image/upload/t_720p_2x/co48wx.png"
   },
   {
-    "name": "Tony Hawk's Pro Skater 5",
+    "name": "Tony Hawks Pro Skater 5",
     "titleID": "CUSA02852",
     "version": "v1.00",
     "region": "EU",
@@ -8784,7 +8820,7 @@
     "image_url_medium": "https://images.igdb.com/igdb/image/upload/t_720p_2x/co271z.png"
   },
   {
-    "name": "Tony Hawk's Project 8",
+    "name": "Tony Hawks Project 8",
     "titleID": "SLUS21444",
     "version": "v1.00",
     "region": "US",
@@ -8804,7 +8840,7 @@
     "image_url_medium": "https://images.igdb.com/igdb/image/upload/t_720p_2x/co1p3d.png"
   },
   {
-    "name": "Tony Hawk's Underground",
+    "name": "Tony Hawks Underground",
     "titleID": "SLUS20731",
     "version": "v1.00",
     "region": "US",
@@ -8827,7 +8863,7 @@
     "image_url_medium": "https://images.igdb.com/igdb/image/upload/t_720p_2x/co2g2b.png"
   },
   {
-    "name": "Tony Hawk's Underground 2",
+    "name": "Tony Hawks Underground 2",
     "titleID": "SLUS20965",
     "version": "v1.00",
     "region": "US",
@@ -8845,24 +8881,6 @@
       }
     ],
     "image_url_medium": "https://images.igdb.com/igdb/image/upload/t_720p_2x/co1p3f.png"
-  },
-  {
-    "name": "Tony Hawks Pro Skater 2 (PS2)",
-    "titleID": "SLUS01066",
-    "version": "v1.00",
-    "region": "US",
-    "size": "553.65 MB",
-    "total_size": "553.65 MB",
-    "genres": [],
-    "description_short": "",
-    "description": "",
-    "dlc": [
-      {
-        "name": "",
-        "size": ""
-      }
-    ],
-    "image_url_medium": ""
   },
   {
     "name": "Tools Up!: Ultimate Edition",
@@ -9391,7 +9409,7 @@
     "name": "Ultimate Custom Night",
     "titleID": "CUSA17985",
     "version": "v1.01",
-    "region": "",
+    "region": "US",
     "size": "252.9 MB",
     "total_size": "252.90 MB",
     "genres": [
@@ -9902,7 +9920,7 @@
     "description": "In Watch Dogs: Legion, near future London is facing its downfall... Unless you do something about it. Build a resistance, fight back, and give the city back to the people. It's time to rise up.",
     "dlc": [
       {
-        "name": "Bloddline",
+        "name": "Bloodline",
         "size": "1.11 MB"
       }
     ],
