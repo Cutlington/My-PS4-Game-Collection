@@ -62,23 +62,25 @@
   .grid { display: grid; gap: 16px; align-items: stretch; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
   .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
     overflow: hidden; box-shadow: var(--shadow); cursor: pointer; text-align: left; padding: 0;
-    display: grid; grid-row: span 5; grid-template-rows: subgrid; row-gap: 0; transition: transform .12s; }
+    display: grid; grid-row: span 4; grid-template-rows: subgrid; row-gap: 0; transition: transform .12s; }
   .card:hover, .card:focus-visible { transform: translateY(-3px); border-color: var(--accent); outline: none; }
   .card img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; background: var(--surface2); display: block; }
   .card .meta { padding: 0 12px; align-self: start; }
-  .card .tags { margin: 0; padding: 8px 12px 12px; align-self: end; align-content: flex-end; }
   .card { position: relative; }
   .stats { display: flex; align-items: center; justify-content: space-between; gap: 8px;
-    padding: 8px 12px 0; align-self: start; min-height: 0; }
+    padding: 8px 12px 12px; align-self: start; }
   .stats:empty { padding: 0; }
   .size { margin-left: auto; font-size: .8rem; font-weight: 600; color: var(--text);
     font-variant-numeric: tabular-nums; white-space: nowrap; }
   .dlc-badge { display: inline-block; background: var(--accent); color: var(--accent-text);
     font-size: .7rem; font-weight: 800; letter-spacing: .06em; line-height: 1.5;
     padding: 1px 9px; border-radius: 999px; }
-  .dsz { color: var(--muted); font-variant-numeric: tabular-nums; margin-left: 6px; }
-  .dlc-list { margin: 8px 0 0; padding-left: 20px; }
-  .dlc-list li { margin: 3px 0; }
+  .dsz { color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .dlc-list { list-style: none; margin: 8px 0 0; padding: 0; }
+  .dlc-list li { display: flex; justify-content: space-between; gap: 14px; padding: 6px 0;
+    border-bottom: 1px solid var(--border); }
+  .dlc-list li:last-child { border-bottom: 0; }
+  .sizeline { margin: 8px 0 0; font-size: .95rem; }
   .card h3 { margin: 0; padding: 10px 12px 3px; font-size: .95rem; line-height: 1.3; align-self: start; }
   .meta { color: var(--muted); font-size: .78rem; }
   .tags { margin-top: 6px; display: flex; flex-wrap: wrap; gap: 4px; }
@@ -210,19 +212,6 @@
   function dlcNames(g) { return dlcItems(g).map(function (d) { return d.name; }); }
   function hasDlc(g) { return dlcNames(g).length > 0; }
 
-  // Up to 3 genres per card: the ones in the quick-badge bar first (so they match the
-  // buttons at the top), rarest first; an optional "main_genres" list on a game overrides this.
-  function cardGenres(g) {
-    var all = g.genres || [];
-    var quick = QUICK.map(function (p) { return p[0]; });
-    var picked = (Array.isArray(g.main_genres) ? g.main_genres : []).filter(function (x) { return all.indexOf(x) >= 0; });
-    var byRarity = function (a, b) { return (genreCounts[a] || 0) - (genreCounts[b] || 0); };
-    var rest = all.filter(function (x) { return picked.indexOf(x) < 0; });
-    var q = rest.filter(function (x) { return quick.indexOf(x) >= 0; }).sort(byRarity);
-    var o = rest.filter(function (x) { return quick.indexOf(x) < 0; }).sort(byRarity);
-    return picked.concat(q, o).slice(0, 3);
-  }
-
   // Which console a game really came from, worked out from its Title ID.
   // CUSA = PS4. PSP discs start with U (ULUS, UCES...). PS1 and PS2 share the SLUS/SCUS/SLES/SCES
   // prefixes (the letters only say US or Europe), so the number decides: US numbers below 20000
@@ -295,7 +284,6 @@
         '<div class="meta">' + esc(g.titleID || 'No title ID') + (g.version ? ' · ' + esc(g.version) : '') + '</div>' +
         '<div class="stats">' + (hasDlc(g) ? '<span class="dlc-badge">DLC</span>' : '') +
           (g.size ? '<span class="size"' + (hasDlc(g) && g.total_size ? ' title="' + esc(g.total_size) + ' with all DLC"' : '') + '>' + esc(g.size) + '</span>' : '') + '</div>' +
-        '<div class="tags">' + cardGenres(g).map(function (x) { return '<span class="tag">' + esc(x) + '</span>'; }).join('') + '</div>' +
         '</button>';
     }).join('');
     $('msg').innerHTML = out.length ? '' : '<div class="empty">No games match your search.</div>';
@@ -304,8 +292,10 @@
   function openGame(i) {
     var g = games[i];
     var dlc = dlcItems(g);
-    var sizeLine = g.size
-      ? '<div class="meta">Game size ' + esc(g.size) + (dlc.length && g.total_size ? ' · ' + esc(g.total_size) + ' with all DLC' : '') + '</div>'
+    var withDlc = dlc.length && g.total_size;
+    var sizeLine = (g.size || g.total_size)
+      ? '<div class="sizeline"><strong>' + (withDlc ? 'Total size ' + esc(g.total_size) : 'Size ' + esc(g.size)) + '</strong>' +
+        (withDlc && g.size ? '<span class="meta"> · game ' + esc(g.size) + ' + all DLC</span>' : '') + '</div>'
       : '';
     var body = dlc.length
       ? '<h4>DLC (' + dlc.length + ')</h4><ul class="dlc-list">' +
