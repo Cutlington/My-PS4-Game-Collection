@@ -45,6 +45,7 @@
   .qbadge:hover { color: var(--text); }
   .qbadge.more { border-style: dashed; }
   .qbadge.on { background: var(--accent); color: var(--accent-text); border-color: var(--accent); }
+  .qsep { flex: 0 0 1px; align-self: stretch; margin: 2px 4px; background: var(--border); }
   .chips { max-width: 1400px; margin: 14px auto 0; padding-top: 14px; border-top: 1px solid var(--border);
     display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; }
   .chips.collapsed { display: none; }
@@ -140,7 +141,7 @@
 <script>
 (function () {
   var DATA_FILE = 'games.json';
-  var games = [], activeGenres = new Set(), genreCounts = {};
+  var games = [], activeGenres = new Set(), activePlatforms = new Set(), genreCounts = {};
   var $ = function (id) { return document.getElementById(id); };
 
   function esc(s) {
@@ -154,8 +155,11 @@
     ['Role-playing (RPG)', 'RPG'], ['Puzzle', 'Puzzle'], ['Platform', 'Platformer'],
     ['Sport', 'Sports'], ['Fighting', 'Fighting'], ['Strategy', 'Strategy']
   ];
+  var PLATFORMS = ['PSP', 'PS2', 'PS1'];
   $('quick').innerHTML = QUICK.map(function (p) {
     return '<button class="qbadge" data-g="' + esc(p[0]) + '">' + esc(p[1]) + '</button>';
+  }).join('') + '<span class="qsep" aria-hidden="true"></span>' + PLATFORMS.map(function (p) {
+    return '<button class="qbadge" data-p="' + p + '">' + p + '</button>';
   }).join('');
 
   var moreBtn = document.createElement('button');
@@ -175,6 +179,7 @@
   function syncBadges() {
     document.querySelectorAll('.chip, .qbadge').forEach(function (b) {
       if (b.dataset.g) b.classList.toggle('on', activeGenres.has(b.dataset.g));
+      if (b.dataset.p) b.classList.toggle('on', activePlatforms.has(b.dataset.p));
     });
     updateMore();
   }
@@ -182,6 +187,12 @@
     var b = e.target.closest('.chip, .qbadge'); if (!b) return;
     var x = b.dataset.g;
     if (activeGenres.has(x)) activeGenres.delete(x); else activeGenres.add(x);
+    syncBadges();
+    render();
+  }
+
+  function togglePlatform(p) {
+    if (activePlatforms.has(p)) activePlatforms.delete(p); else activePlatforms.add(p);
     syncBadges();
     render();
   }
@@ -204,6 +215,20 @@
     var q = rest.filter(function (x) { return quick.indexOf(x) >= 0; }).sort(byRarity);
     var o = rest.filter(function (x) { return quick.indexOf(x) < 0; }).sort(byRarity);
     return picked.concat(q, o).slice(0, 3);
+  }
+
+  // Which console a game really came from, worked out from its Title ID.
+  // CUSA = PS4. PSP discs start with U (ULUS, UCES...). PS1 and PS2 share the SLUS/SCUS/SLES/SCES
+  // prefixes (the letters only say US or Europe), so the number decides: US numbers below 20000
+  // and EU numbers below 50000 are PS1, anything above is PS2. Anything else (homebrew etc.) is ''.
+  function platformOf(g) {
+    var m = (g.titleID || '').toUpperCase().match(/^([A-Z]{4})(\d+)$/);
+    if (!m) return '';
+    var p = m[1], n = parseInt(m[2], 10);
+    if (/^U[LC][UEJAK][SA]$/.test(p)) return 'PSP';
+    if (p === 'SLUS' || p === 'SCUS') return n < 20000 ? 'PS1' : 'PS2';
+    if (p === 'SLES' || p === 'SCES') return n < 50000 ? 'PS1' : 'PS2';
+    return '';
   }
 
   function letterOf(name) {
@@ -243,6 +268,7 @@
     var letter = s.indexOf('L:') === 0 ? s.slice(2) : null;
     var out = games.filter(function (g) {
       if (letter && letterOf(g.name) !== letter) return false;
+      if (activePlatforms.size && !activePlatforms.has(platformOf(g))) return false;
       if (q && (g.name || '').toLowerCase().indexOf(q) < 0 && (g.titleID || '').toLowerCase().indexOf(q) < 0) return false;
       var gs = g.genres || [];
       var ok = true;
@@ -288,7 +314,10 @@
   $('q').addEventListener('input', render);
   $('sort').addEventListener('change', render);
   $('chips').addEventListener('click', toggleGenre);
-  $('quick').addEventListener('click', function (e) { if (e.target.dataset.g) toggleGenre(e); });
+  $('quick').addEventListener('click', function (e) {
+    if (e.target.dataset.g) toggleGenre(e);
+    else if (e.target.dataset.p) togglePlatform(e.target.dataset.p);
+  });
   $('grid').addEventListener('click', function (e) {
     var c = e.target.closest('.card'); if (c) openGame(+c.dataset.i);
   });
