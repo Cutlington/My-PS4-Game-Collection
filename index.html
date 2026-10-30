@@ -283,7 +283,7 @@
         '<h3>' + esc(g.name) + '</h3>' +
         '<div class="meta">' + esc(g.titleID || 'No title ID') + (g.version ? ' · ' + esc(g.version) : '') + '</div>' +
         '<div class="stats">' + (hasDlc(g) ? '<span class="dlc-badge">DLC</span>' : '') +
-          (g.size ? '<span class="size"' + (hasDlc(g) && g.total_size ? ' title="' + esc(g.total_size) + ' with All DLC"' : '') + '>' + esc(g.size) + '</span>' : '') + '</div>' +
+          ((g.total_size || g.size) ? '<span class="size"' + (hasDlc(g) && g.size ? ' title="Game ' + esc(g.size) + ' + All DLC"' : '') + '>' + esc(g.total_size || g.size) + '</span>' : '') + '</div>' +
         '</button>';
     }).join('');
     $('msg').innerHTML = out.length ? '' : '<div class="empty">No games match your search.</div>';
