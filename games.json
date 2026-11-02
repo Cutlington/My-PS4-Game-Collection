@@ -3408,7 +3408,7 @@
         "size": "1.18 MB"
       }
     ],
-    "image_url_medium": ""
+    "image_url_medium": "https://images.igdb.com/igdb/image/upload/t_720p_2x/co3k3s.png"
   },
   {
     "name": "House Flipper",
@@ -4116,7 +4116,7 @@
         "size": ""
       }
     ],
-    "image_url_medium": ""
+    "image_url_medium": "https://images.igdb.com/igdb/image/upload/t_720p_2x/co1pni.png"
   },
   {
     "name": "Lethal VR",
@@ -4419,7 +4419,7 @@
     "dlc": [
       {
         "name": "",
-        "size": ""
+        "size": "https://images.igdb.com/igdb/image/upload/t_720p_2x/co213p.png"
       }
     ],
     "image_url_medium": ""
